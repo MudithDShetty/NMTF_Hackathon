@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Testimonial from "./components/Testimonial";
 import { useRef } from "react";
 
-export default function App() {
+export default function LandingPage() {
   const blogRef = useRef(null);
 
   return (

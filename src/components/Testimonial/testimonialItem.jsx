@@ -19,8 +19,8 @@ export default function TestimonialItem() {
           vitae at aliquam sit accums rutrum ut convallis.”
         </Paragraph>
         <div className="flex flex-col font-body">
-          <h5 className="text-primary-100 mb-2.5 font-medium">John Carter</h5>
-          <p className="text-black-300">Fashion Shoes Co.</p>
+          <h5 className="text-primary-100 mb-2.5 font-medium">Aditya Negi</h5>
+          <p className="text-black-300">JPMC</p>
         </div>
       </div>
     </div>

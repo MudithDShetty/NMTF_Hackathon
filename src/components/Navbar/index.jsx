@@ -45,29 +45,26 @@ export default function Navbar() {
 
       {/* Menu */}
       <div className="hidden md:flex items-center md:gap-4 lg:gap-8 text-white text-sm lg:text-base font-body">
-        <a href="#" className="navlink">
+        <a href="/trending-companies" className="navlink">
           Trending Companies
         </a>
-        <a href="#" className="navlink">
+        <a href="/blog" className="navlink">
           Community Blog
         </a>
-        <a href="#" className="navlink">
-          Pricing
-        </a>
-        <a href="#" className="navlink">
+        <a href="/resources" className="navlink">
           Resources
         </a>
-        <a href="#" className="navlink active-navlink">
+        <a href="/creds" className="navlink active-navlink">
           Buy Creds!
         </a>
       </div>
 
       {/* Button */}
       <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
-        <a href="#">
+        <a href="login">
           <p className="text-white underline cursor-pointer">Login</p>
         </a>
-        <a href="#">
+        <a href="sign-up">
           <button className="text-[#05ABB6] bg-white md:py-2.5 px-4 py-3.5 px-[25px]">
             Start free
           </button>
