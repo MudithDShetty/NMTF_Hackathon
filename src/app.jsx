@@ -5,16 +5,17 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import Testimonial from "./components/Testimonial";
+import { useRef } from "react";
 
 export default function App() {
+  const blogRef = useRef(null);
+
   return (
     <>
-      <Navbar />
-      <Main />
-      <Banner />
-      <Card />
+      <Navbar /> {/* Navbar component LOGO AND CREDITS AND LOGIN */}
+      <Main blogRef = {blogRef}/> 
       <Testimonial />
-      <Blog />
+      <Blog ref = {blogRef}/>
       <Footer />
     </>
   );

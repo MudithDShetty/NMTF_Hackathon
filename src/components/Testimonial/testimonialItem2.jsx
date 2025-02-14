@@ -6,7 +6,7 @@ export default function TestimonialItem() {
     <div className="flex flex-col gap-[50px] items-center md:flex-row md:items-end lg:gap-44 lg:items-center">
       <img
         className="w-[300px] md:w-8/12 lg:w-2/5"
-        src="/man-happy.png"
+        src="/man-happy2.png"
         alt="testimonial"
       />
       <div className="flex flex-col sm:w-10/12">

@@ -1,10 +1,11 @@
-import SubHead from "../Atoms/subhead"
-import Paragraph from "../Atoms/paragraph"
+import SubHead from "../Atoms/subhead";
+import Paragraph from "../Atoms/paragraph";
 import { Button } from "../Atoms/button";
+import { forwardRef } from "react";
 
-export default function Blog() {
+const Blog = forwardRef((props, ref) => {
   return (
-    <div className="container mx-auto max-w-[1344px]">
+    <div ref={ref} className="container mx-auto max-w-[1344px]">
       <div className="px-5 py-20 flex flex-col gap-[50px] sm:px-10">
         {/* Head Content */}
         <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-end">
@@ -47,4 +48,6 @@ export default function Blog() {
       </div>
     </div>
   );
-}
+});
+
+export default Blog;

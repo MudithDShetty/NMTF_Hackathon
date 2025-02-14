@@ -8,45 +8,45 @@ export default function Features() {
   const dataFeatures = [
     {
       id: 1,
-      title: "One time payment",
+      title: "Smart Inventory Management",
       logo: "/feature-1.svg",
       content:
-        "Check out our best practices and support to quickly make text messaging one of your top 3 revenue channels.",
+        "Keep your business organized with real-time stock tracking and automated alerts, ensuring you never run out of essential products.",
     },
     {
       id: 2,
-      title: "Self-reported data",
+      title: "Google API Insights",
       logo: "/feature-2.svg",
       content:
-        "You own your data, store design and business plan, but you are free to use the software platform and resources provided by Shopify.",
+        "Make data-driven decisions with built-in Google Analytics, helping you track visitor behavior, sales trends, and growth opportunities.",
     },
     {
       id: 3,
-      title: "Updates are always free",
+      title: "Cred Currency Trading",
       logo: "/feature-3.svg",
       content:
-        "Shopify is so dedicated to keeping its software current that it sends you free updates for a lifetime without charging you anything.",
+        "Use our in-page Cred currency to trade services, pay for expert help, and collaborate with fellow business owners effortlessly.",
     },
     {
       id: 4,
-      title: "Mobile first design",
+      title: "Seamless Business Chat",
       logo: "/feature-4.svg",
       content:
-        "With our mobile app, you can allow your customers to check their order status, browse your store and create an account on the spot.",
+        "Connect, network, and get advice instantly with our unique chat system designed for business collaboration and service exchange.",
     },
     {
       id: 5,
       title: "100% Customizable",
       logo: "/feature-5.svg",
       content:
-        "You can customize your storefront and everything else in the way you want as the owner of your source code.",
+        "Personalize your business page, branding, and service offerings to match your vision and stand out in your industry.",
     },
     {
       id: 6,
       title: "Easy task management",
       logo: "/feature-6.svg",
       content:
-        "You can have peace of mind knowing that your system is running smoothly thanks to our techs' expertise and precision.",
+        "Stay ahead with continuous improvements and security updates—ensuring your business tools evolve as your needs grow.",
     },
   ];
 

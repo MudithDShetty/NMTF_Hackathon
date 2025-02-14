@@ -1,6 +1,7 @@
-export default function MainButton({ children, primary, style }) {
+export default function MainButton({ children, primary, style, onClick }) {
   return (
     <button
+    onClick={onClick}
       className={`${
         primary
           ? "border border-primary-100 bg-primary-100 text-tertiary-200"
