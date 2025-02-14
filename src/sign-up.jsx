@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { auth, googleProvider } from "./firebase.js";
-import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup, createUserWithEmailAndPassword, fetchSignInMethodsForEmail } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 
 export default function SignUp() {
@@ -9,14 +9,58 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
 
+  // Function to send UID to backend
+  const sendUIDToServer = async (uid) => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/calls/${uid}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ uid }),
+      });
+
+      if (response.ok) {
+        console.log("UID sent successfully");
+      } else {
+        console.error("Failed to send UID");
+      }
+    } catch (error) {
+      console.error("Error sending UID:", error);
+    }
+  };
+
+  // Function to get user UID and send it to backend
+  const getUserUID = () => {
+    const user = auth.currentUser;
+    if (user) {
+      console.log("User UID:", user.uid);
+      sendUIDToServer(user.uid);
+    } else {
+      console.error("User not found.");
+    }
+  };
+
   const handleSignUp = async (e) => {
     e.preventDefault();
     setError(null);
+
     try {
+      // Check if email is already in use
+      const methods = await fetchSignInMethodsForEmail(auth, email);
+      if (methods.length > 0) {
+        setError("Email already exists. Please log in instead.");
+        return;
+      }
+
+      // Proceed with sign-up if email doesn't exist
       await createUserWithEmailAndPassword(auth, email, password);
       alert("Sign-up successful!");
+      getUserUID(); // Fetch UID and send to backend
     } catch (error) {
-      setError(error.message);
+      if (error.code === "auth/email-already-in-use") {
+        setError("Email already exists. Please log in.");
+      } else {
+        setError(error.message);
+      }
     }
   };
 
@@ -24,6 +68,7 @@ export default function SignUp() {
     try {
       await signInWithPopup(auth, googleProvider);
       alert("Google Sign-in successful!");
+      getUserUID(); // Fetch UID and send to backend
     } catch (error) {
       setError(error.message);
     }
