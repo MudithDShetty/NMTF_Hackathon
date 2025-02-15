@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import HomeDashboard from './user-dashB';
 
-export default class login extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+<Route path="/dashboard" element={<HomeDashboard />} />;
+
+export default function Login() {
+  return (
+    <div>
+      <HomeDashboard />
+    </div>
+  );
 }

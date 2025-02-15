@@ -51,12 +51,6 @@ export default function Navbar() {
         <a href="/trending-companies" className="navlink">
           Trending Companies
         </a>
-        <a href="/blog" className="navlink">
-          Community Blog
-        </a>
-        <a href="/resources" className="navlink">
-          Resources
-        </a>
         <a href="/creds" className="navlink active-navlink">
           Buy Creds!
         </a>
@@ -64,7 +58,7 @@ export default function Navbar() {
 
       {/* Button */}
       <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
-        <a href="login">
+        <a href="/login">
           <p className="text-white underline cursor-pointer">Login</p>
         </a>
         <a href="sign-up">
