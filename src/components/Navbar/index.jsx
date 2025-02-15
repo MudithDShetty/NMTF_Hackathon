@@ -58,7 +58,7 @@ export default function Navbar() {
 
       {/* Button */}
       <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
-        <a href="/login">
+        <a href="/dashboard">
           <p className="text-white underline cursor-pointer">Login</p>
         </a>
         <a href="sign-up">
